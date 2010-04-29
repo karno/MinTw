@@ -70,6 +70,24 @@ namespace Mintw.Lang {
         }
         
         /// <summary>
+        ///   MinTw に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string IconText {
+            get {
+                return ResourceManager.GetString("IconText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MinTw : Busy... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string IconTextBusy {
+            get {
+                return ResourceManager.GetString("IconTextBusy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Errors has occured. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string OnHandledError {
@@ -84,6 +102,27 @@ namespace Mintw.Lang {
         internal static string Received {
             get {
                 return ResourceManager.GetString("Received", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MinTw watches your account, and it notifies you new information if available.
+        ///
+        ///If you click this icon, you will see post new tweet dialog.
+        ///And, if you right-click this icon, you will see the menu. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string StartupBalloonText {
+            get {
+                return ResourceManager.GetString("StartupBalloonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MinTw is here. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string StartupBalloonTitle {
+            get {
+                return ResourceManager.GetString("StartupBalloonTitle", resourceCulture);
             }
         }
         

@@ -139,4 +139,19 @@
   <data name="URLCheckNotifyTitle" xml:space="preserve">
     <value>URL圧縮の警告</value>
   </data>
+  <data name="StartupBalloonText" xml:space="preserve">
+    <value>MinTwはあなたのアカウントを監視し、新しい情報があれば通知します。
+
+このアイコンをクリックすると、新しいtweetを投稿するダイアログを表示します。
+右クリックすると、各種オペレーションを行えるメニューを表示します。</value>
+  </data>
+  <data name="StartupBalloonTitle" xml:space="preserve">
+    <value>MinTwはここに常駐します。</value>
+  </data>
+  <data name="IconText" xml:space="preserve">
+    <value>MinTw</value>
+  </data>
+  <data name="IconTextBusy" xml:space="preserve">
+    <value>MinTw : 通信中...</value>
+  </data>
 </root>

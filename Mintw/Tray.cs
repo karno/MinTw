@@ -31,10 +31,16 @@ namespace Mintw
         public Tray()
         {
             InitializeComponent();
+            this.notifier.Text = Lang.i18n.IconText;
 
             if (Kernel.Config.UserId == null || Kernel.Config.UserToken == null || Kernel.Config.UserSecret == null)
             {
                 menuSetting_Click(null, null);
+                this.notifier.ShowBalloonTip(
+                    5000,
+                    Lang.i18n.StartupBalloonTitle,
+                    Lang.i18n.StartupBalloonText,
+                    ToolTipIcon.Info);
             }
             else
             {
@@ -54,6 +60,7 @@ namespace Mintw
         {
             if (obj && animator == null)
             {
+                this.notifier.Text = Lang.i18n.IconTextBusy;
                 iconCtor = 0;
                 this.animator = new System.Threading.Timer(
                     UpdateAnimation,
@@ -64,6 +71,7 @@ namespace Mintw
             }
             else if (!obj && animator != null)
             {
+                this.notifier.Text = Lang.i18n.IconText;
                 animator.Dispose();
                 animator = null;
                 this.notifier.Icon = this.defaultIcon;
@@ -135,18 +143,26 @@ namespace Mintw
 
         private void menuSetting_Click(object sender, EventArgs e)
         {
-            this.notifier.Visible = false;
-            using (var set = new Setup())
+            try
             {
-                set.ShowDialog();
-                if (set.CredentialInformationUpdated)
+                this.notifier.Visible = false;
+                using (var set = new Setup())
                 {
-                    Kernel.Accessor.UpdateFollowingsList();
-                    Kernel.Config.PrevReceivedDmId = 0;
-                    Kernel.Config.PrevReceivedMentionId = 0;
+                    set.ShowDialog();
+                    this.notifier.Visible = true;
+                    //アカウント情報が更新されていたら情報の更新
+                    if (set.CredentialInformationUpdated)
+                    {
+                        Kernel.Accessor.UpdateFollowingsList();
+                        Kernel.Config.PrevReceivedDmId = 0;
+                        Kernel.Config.PrevReceivedMentionId = 0;
+                    }
                 }
             }
-            this.notifier.Visible = true;
+            finally
+            {
+                this.notifier.Visible = true;
+            }
         }
 
         private void menuExit_Click(object sender, EventArgs e)

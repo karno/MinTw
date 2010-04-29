@@ -9,11 +9,10 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Mintw</RootNamespace>
-    <AssemblyName>Mintw</AssemblyName>
+    <AssemblyName>mintw</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>MinTw.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -139,9 +138,6 @@
       <DependentUpon>Tray.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tweet.ja-JP.resx">
-      <DependentUpon>Tweet.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tweet.ja.resx">
       <DependentUpon>Tweet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tweet.resx">

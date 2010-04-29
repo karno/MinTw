@@ -139,4 +139,19 @@ Are you sure to shorten it?</value>
   <data name="URLCheckNotifyTitle" xml:space="preserve">
     <value>URL shortening warning</value>
   </data>
+  <data name="StartupBalloonText" xml:space="preserve">
+    <value>MinTw watches your account, and it notifies you new information if available.
+
+If you click this icon, you will see post new tweet dialog.
+And, if you right-click this icon, you will see the menu.</value>
+  </data>
+  <data name="StartupBalloonTitle" xml:space="preserve">
+    <value>MinTw is here.</value>
+  </data>
+  <data name="IconText" xml:space="preserve">
+    <value>MinTw</value>
+  </data>
+  <data name="IconTextBusy" xml:space="preserve">
+    <value>MinTw : Busy...</value>
+  </data>
 </root>
