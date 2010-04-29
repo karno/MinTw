@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC04203A-0577-4FDB-9FCD-FCE79129DA9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mintw</RootNamespace>
+    <AssemblyName>Mintw</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Access.cs" />
+    <Compile Include="AccountSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountSetup.Designer.cs">
+      <DependentUpon>AccountSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notification.Designer.cs">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AtSuggest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AtSuggest.Designer.cs">
+      <DependentUpon>AtSuggest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="Define.cs" />
+    <Compile Include="ImageUploader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageUploader.Designer.cs">
+      <DependentUpon>ImageUploader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JmpUrlCompress.cs" />
+    <Compile Include="Kernel.cs" />
+    <Compile Include="Lang\i18n.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i18n.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\i18n.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>i18n.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MintwOAuth.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AccountSetup.ja-JP.resx">
+      <DependentUpon>AccountSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountSetup.resx">
+      <DependentUpon>AccountSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AtSuggest.resx">
+      <DependentUpon>AtSuggest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageUploader.resx">
+      <DependentUpon>ImageUploader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\i18n.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\i18n.ja-JP.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>i18n.ja-JP.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.ja-JP.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notification.resx">
+      <DependentUpon>Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScreenCapture.resx">
+      <DependentUpon>ScreenCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.ja-JP.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup.resx">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tray.ja-JP.resx">
+      <DependentUpon>Tray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tray.resx">
+      <DependentUpon>Tray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tweet.ja-JP.resx">
+      <DependentUpon>Tweet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tweet.ja.resx">
+      <DependentUpon>Tweet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tweet.resx">
+      <DependentUpon>Tweet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VersionInfo.resx">
+      <DependentUpon>VersionInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SaveLoadXML.cs" />
+    <Compile Include="ScreenCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenCapture.Designer.cs">
+      <DependentUpon>ScreenCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup.Designer.cs">
+      <DependentUpon>Setup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tray.Designer.cs">
+      <DependentUpon>Tray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tweet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tweet.Designer.cs">
+      <DependentUpon>Tweet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TwitpicUpload.cs" />
+    <Compile Include="VersionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VersionInfo.Designer.cs">
+      <DependentUpon>VersionInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Std.Network\Std.Network.csproj">
+      <Project>{BC064822-04D8-4C44-9A4C-334AC7D3C046}</Project>
+      <Name>Std.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Std.Tweak\Std.Tweak.csproj">
+      <Project>{1FAD2DE7-2E4E-4853-B2CB-D8383FCA738D}</Project>
+      <Name>Std.Tweak</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MinTw.ico" />
+    <None Include="Resources\MinTw.ico" />
+    <None Include="Resources\loading_8.ico" />
+    <None Include="Resources\loading_1.ico" />
+    <None Include="Resources\loading_2.ico" />
+    <None Include="Resources\loading_3.ico" />
+    <None Include="Resources\loading_4.ico" />
+    <None Include="Resources\loading_5.ico" />
+    <None Include="Resources\loading_6.ico" />
+    <None Include="Resources\loading_7.ico" />
+    <None Include="Resources\mw.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
