@@ -127,6 +127,7 @@ namespace Mintw
             finally
             {
                 SetAccessState(false);
+                Kernel.Config.Save();
             }
         }
 

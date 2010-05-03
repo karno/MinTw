@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mintw", "Mintw\Mintw.csproj", "{EC04203A-0577-4FDB-9FCD-FCE79129DA9A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Std.Network", "Std.Network\Std.Network.csproj", "{BC064822-04D8-4C44-9A4C-334AC7D3C046}"
