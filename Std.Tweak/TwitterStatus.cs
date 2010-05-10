@@ -20,6 +20,7 @@ namespace Std.Tweak
         private TwitterStatus(XElement node)
             : base()
         {
+            System.Diagnostics.Debug.WriteLine(node.ToString());
             this.Id = node.Element("id").ParseLong();
 
             this.Truncated = node.Element("truncated").ParseBool();

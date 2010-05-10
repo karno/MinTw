@@ -29,11 +29,16 @@ namespace Std.Tweak
         /// <returns>User instance</returns>
         public static TwitterUser CreateByNode(XElement uNode)
         {
-            if (uNode == null)
+            //稀にIDだけが取得できて、screen_nameが取得できないことがある
+            if (GetUserIDByNode(uNode) == null)
                 return null;
             return new TwitterUser(uNode);
         }
 
+        /// <summary>
+        /// A class for twitter user data.<para/>
+        /// Use CreateByNode(XElement), if you want to create instance with analying xml.
+        /// </summary>
         public TwitterUser() : base() { }
 
         private TwitterUser(XElement uNode)

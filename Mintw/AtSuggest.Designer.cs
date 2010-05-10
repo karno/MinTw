@@ -53,11 +53,12 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AtSuggest";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.AtSuggest_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AtSuggest_FormClosing);
-            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.AtSuggest_PreviewKeyDown);
+            this.Load += new System.EventHandler(this.AtSuggest_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AtSuggest_KeyDown);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.AtSuggest_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }

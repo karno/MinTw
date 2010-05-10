@@ -125,6 +125,7 @@ namespace Mintw
         {
             Kernel.TweetWindow.Show();
             Kernel.TweetWindow.Visible = true;
+            Kernel.TweetWindow.Activate();
         }
 
         private void menuCheck_Click(object sender, EventArgs e)

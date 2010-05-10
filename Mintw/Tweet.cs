@@ -338,5 +338,11 @@ namespace Mintw
         }
 
         #endregion
+
+        private void Tweet_Shown(object sender, EventArgs e)
+        {
+            this.Activate();
+            this.tweetText.Focus();
+        }
     }
 }

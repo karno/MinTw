@@ -47,12 +47,12 @@
             this.tweetText.HideSelection = false;
             this.tweetText.Name = "tweetText";
             this.tweetText.TextChanged += new System.EventHandler(this.tweetText_TextChanged);
-            this.tweetText.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tweetText_PreviewKeyDown);
-            this.tweetText.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tweetText_MouseChange);
             this.tweetText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tweetText_KeyDown);
             this.tweetText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tweetText_KeyChange);
             this.tweetText.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tweetText_MouseChange);
+            this.tweetText.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tweetText_MouseChange);
             this.tweetText.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tweetText_MouseChange);
+            this.tweetText.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.tweetText_PreviewKeyDown);
             // 
             // menuAttachOption
             // 
@@ -116,8 +116,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Tweet";
-            this.VisibleChanged += new System.EventHandler(this.Tweet_VisibleChanged);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Tweet_FormClosing);
+            this.Shown += new System.EventHandler(this.Tweet_Shown);
+            this.VisibleChanged += new System.EventHandler(this.Tweet_VisibleChanged);
             this.menuAttachOption.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

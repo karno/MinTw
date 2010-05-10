@@ -24,6 +24,7 @@ namespace Std.Tweak
         private TwitterDirectMessage(XElement node)
             : base()
         {
+            System.Diagnostics.Debug.WriteLine(node.ToString());
             this.Id = node.Element("id").ParseLong();
 
             this.Text = node.Element("text").ParseString();

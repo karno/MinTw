@@ -29,5 +29,10 @@ namespace Mintw
             }
             catch { }
         }
+
+        private void VersionInfo_Shown(object sender, EventArgs e)
+        {
+            this.Activate();
+        }
     }
 }
