@@ -141,9 +141,9 @@ namespace Std.Tweak.CredentialProviders
 
         protected abstract string ConsumerSecret { get; }
 
-        const string ProviderRequestTokenUrl = "http://twitter.com/oauth/request_token";
-        const string ProviderAccessTokenUrl = "http://twitter.com/oauth/access_token";
-        const string ProviderAuthorizeUrl = "http://twitter.com/oauth/authorize";
+        const string ProviderRequestTokenUrl = "https://api.twitter.com/oauth/request_token";
+        const string ProviderAccessTokenUrl = "https://api.twitter.com/oauth/access_token";
+        const string ProviderAuthorizeUrl = "https://api.twitter.com/oauth/authorize";
 
 
         const OAuthSigType SignatureType = OAuthSigType.Hmac_Sha1;

@@ -108,7 +108,7 @@ namespace Mintw
                     DmCnt = 0;
                     //DMのチェック
                     newDms = CheckDms();
-                    if (newDms != null)
+                    if (newDms != null && newDms.Count() > 0)
                         DMreceived = true;
                 }
                 if (OnReceivedNew != null && (newMentions != null || newDms != null))
